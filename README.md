@@ -28,7 +28,7 @@ Skapa ett konto på [Dockerhub](https://hub.docker.com/).
 
 
 ### Kode
-Last ned kode från detta repository.
+Last ned kode från detta repository. Koden blir tillgänglig 1/3.
 
 ## Innan workshop
 Starta gärna minikube och docker lokalt. Navigera till mappen som denna koden är i valfritt CLI och öppna mappen med koden i valfri IDE. Good to go!
