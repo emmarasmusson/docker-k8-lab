@@ -1,0 +1,15 @@
+apiVersion: v1
+# Service hanterar nätverksaccess till pods.
+kind: Service
+metadata:
+  name: docker-k8-101-app-service
+  labels:
+    app: docker-k8-101-app
+spec:
+# Exposar services på varje node's IP med en statisk port så vi kan nå applikationen. 
+  type: NodePort
+  ports:
+    - port: 3000 #Porten som vi deklarerade i vår docker fil.
+      targetPort: 3000 #Porten servicen skickar request till
+  selector:
+    app: docker-k8-101-app

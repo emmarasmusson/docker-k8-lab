@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+#Vi vill ha en deployment då den är ansvarig för att ha pods körandes.
+kind: Deployment
+metadata:
+  name: docker-k8-101-app
+spec:
+#Antal pods vi vill ha körandes, alltså applikasjoner.
+  replicas: 1
+  selector:
+    matchLabels:
+      app: docker-k8-101-app
+  template:
+    metadata:
+      labels:
+        app: docker-k8-101-app
+    spec:
+      containers:
+      - name: docker-k8-101-app
+      #Hvor vi finner imaget?
+        image: docker.io/erasmusson/docker-k8-101-lab:latest
